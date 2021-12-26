@@ -1,5 +1,11 @@
 module.exports = {
   reactStrictMode: true,
-  presets: ["next/babel"]
+  images: {
+    domains: [
+      "links.papareact.com",
+      "plateform-lookaside.fbsbx.com",
+      "firebasestorage.googleapis.com"
+    ]
+  }
 }
 
