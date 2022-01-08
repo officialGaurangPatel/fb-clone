@@ -1,8 +1,11 @@
 import Image from "next/image"
 import { BellIcon, ChatIcon, ChevronDownIcon, FlagIcon, HomeIcon, PlayIcon, SearchIcon, ShoppingCartIcon, UserGroupIcon, ViewGridAddIcon } from "@heroicons/react/outline"
 import HeaderIcon from "./HeaderIcon"
+import { signOut, useSession } from "next-auth/react"
 
 function Heeader() {
+    const { data: session } = useSession();
+    console.log(`session`, session)
     return (
         <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
             {/* HeaderLeft */}
@@ -26,7 +29,12 @@ function Heeader() {
             {/* HeaderRight */}
             <div className="flex items-center md:space-x-2 justify-end">
                 {/* Profile Pic */}
-                <p className="whitespace-nowrap font-semibold pr-3">Gaurang Patel</p>
+                <image onClick={() => signOut()}
+                    className="rounded-full cursor-pointer bg-blue-50 h-8 w-8"
+                    src={session.user.image}
+                    layout="fixed"
+                />
+                <p className="whitespace-nowrap font-semibold pr-3">{session.user.name}</p>
                 <ViewGridAddIcon className="icon" />
                 <ChatIcon className="icon" />
                 <BellIcon className="icon" />
