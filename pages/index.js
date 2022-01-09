@@ -1,5 +1,6 @@
 import { getSession } from 'next-auth/react'
 import Head from 'next/head'
+import Feed from '../component/Feed'
 import Heeader from '../component/Heeader'
 import Login from '../component/Login'
 import Sidebar from '../component/Sidebar'
@@ -10,13 +11,14 @@ export default function Home({ session }) {
     return <Login />
   }
   return (
-    <div>
+    <div className='h-screen bg-gray-100 overflow-hidden'>
       <Head>
         <title>Facebook</title>
       </Head>
       <Heeader />
-      <main>
+      <main className='flex'>
         <Sidebar />
+        <Feed />
 
       </main>
     </div>
