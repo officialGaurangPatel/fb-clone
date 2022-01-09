@@ -1,5 +1,6 @@
 import React from 'react'
 import InputBox from './InputBox'
+import Posts from './Posts'
 import Stroies from './Stroies'
 
 function Feed() {
@@ -8,7 +9,7 @@ function Feed() {
             <div className='mx-auto max-w-md md:max-w-lg lg:max-w-2xl'>
                 <Stroies />
                 <InputBox />
-                {/* posts */}
+                <Posts />
             </div>
         </div>
     )
