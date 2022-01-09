@@ -29,8 +29,8 @@ function Heeader() {
             {/* HeaderRight */}
             <div className="flex items-center md:space-x-2 justify-end">
                 {/* Profile Pic */}
-                <image onClick={() => signOut()}
-                    className="rounded-full cursor-pointer bg-blue-50 h-8 w-8"
+                <img onClick={() => signOut()}
+                    className="rounded-full cursor-pointer h-8 w-8"
                     src={session.user.image}
                     layout="fixed"
                 />

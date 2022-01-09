@@ -4,11 +4,11 @@ const SidebarRow = ({ src, Icon, title }) => {
     return (
         <div className='flex items-center space-x-2 p-4 hover:bg-gray-200 rounded-xl cursor-pointer'>
             {src && (
-                <image
-                    className="rounded-full cursor-pointer bg-blue-50 h-8 w-8"
+                <img
+                    className="rounded-full cursor-pointer h-8 w-8"
                     src={src}
-                    // width={30}
-                    // heigth={30}
+                    width={30}
+                    heigth={30}
                     layout="fixed"
                 />
             )}
